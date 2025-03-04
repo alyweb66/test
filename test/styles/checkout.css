@@ -1,0 +1,24 @@
+.custom-border {
+    border-top: 2px solid #ffc107;
+    border-bottom: 1px solid rgb(223, 221, 221);
+    background-color: white;
+    padding: 0.3rem 0;
+}
+
+.custom-nav-img {
+    width: 3.8rem;
+    height: auto;
+}
+
+.custom-checkbox:checked {
+    background-color: #e08207 !important;
+    /* Couleur warning */
+    border-color: #ffc107 !important;
+    
+}
+
+input::placeholder {
+    font-size: 0.8rem; 
+    color: #6c757d;
+    opacity: 1; 
+  }
