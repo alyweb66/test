@@ -10,7 +10,6 @@ import {
 } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
-
 export default function Checkout() {
   // Initialize Stripe with the publishable key
   const stripePromise = loadStripe(
@@ -92,7 +91,10 @@ export default function Checkout() {
                 className="custom-icons-recto-card me-2"
                 alt="Icône carte recto"
               />
-              <div className="form-control my-2 mt-0 custom-input-stripe">
+              <div
+                id="cardNumber"
+                className="form-control my-2 mt-0 custom-input-stripe"
+              >
                 <CardNumberElement
                   options={{
                     linkAuthentication: false,
@@ -120,7 +122,10 @@ export default function Checkout() {
                 <label htmlFor="cardExpiry" className="form-label small m-0">
                   Date d'expiration
                 </label>
-                <div className="form-control my-2 mt-0 custom-input-stripe">
+                <div
+                  id="cardExpiry"
+                  className="form-control my-2 mt-0 custom-input-stripe"
+                >
                   <CardExpiryElement
                     options={{
                       style: {
@@ -143,7 +148,10 @@ export default function Checkout() {
                 <label htmlFor="cardCvc" className="form-label small m-0">
                   CVC/CVV
                 </label>
-                <div className="form-control my-2 mt-0 custom-input-stripe">
+                <div
+                  id="cardCvc"
+                  className="form-control my-2 mt-0 custom-input-stripe"
+                >
                   <CardCvcElement
                     options={{
                       placeholder: '123',
@@ -244,7 +252,7 @@ export default function Checkout() {
             </section>
             <section>
               <div className="mb-1 p-3 pt-0">
-                <h5 className="fw-bold mb-0 fs-4">Adresse de Livraison</h5>
+                <h4 className="fw-bold mb-0 fs-4">Adresse de Livraison</h4>
                 <small className="text-muted d-block mb-3" aria-hidden="true">
                   Entrez votre adresse de livraison
                 </small>
@@ -367,7 +375,7 @@ export default function Checkout() {
             </section>
             <section>
               <div className="mb-1 p-3 pt-0">
-                <h5 className="fw-bold mb-0 fs-4">Méthode de Livraison</h5>
+                <h4 className="fw-bold mb-0 fs-4">Méthode de Livraison</h4>
                 <small className="text-muted" aria-hidden="true">
                   Sélectionnez votre méthode de livraison ci-dessous
                 </small>
@@ -382,7 +390,7 @@ export default function Checkout() {
             </section>
             <section>
               <div className="mb-4 p-3">
-                <h5 className="fw-bold mb-0 fs-4">Paiement</h5>
+                <h4 className="fw-bold mb-0 fs-4">Paiement</h4>
                 <small className="text-muted" aria-hidden="true">
                   Sélectionnez votre méthode de paiement ci-dessous. Toutes les
                   transactions sont sécurisées et cryptées.
