@@ -6,7 +6,7 @@ export default function Checkout() {
         <div className="container">
           <img src="/arche.png" className="custom-nav-img"></img>
           <p className="text-start mb-0">
-            Panier <i className="bi bi-basket"></i>
+            Panier <i className="bi bi-basket ms-2"></i>
           </p>
         </div>
       </nav>
@@ -14,13 +14,14 @@ export default function Checkout() {
         <div className="row">
           <div className=" bg-white col-lg-6 border-end">
             <div className="mb-1 p-3">
-              <h4 className="fw-bold m-0">Contact</h4>
+              <h4 className="fw-bold m-0 fs-4">Contact</h4>
               <small className="text-muted">
                 Entrez vos informations de contact
               </small>
+              <br />
               <label
                 for="exampleFormControlInput1"
-                className="form-label small m-0"
+                className="form-label small m-0 mt-3"
               >
                 Email
               </label>
@@ -43,13 +44,13 @@ export default function Checkout() {
             </div>
 
             <div className="mb-1 p-3 pt-0">
-              <h5 className="fw-bold mb-0">Adresse de Livraison</h5>
-              <small className="text-muted">
+              <h5 className="fw-bold mb-0 fs-4">Adresse de Livraison</h5>
+              <small className="text-muted d-block mb-3">
                 Entrez votre adresse de livraison
               </small>
               <div className="row">
                 <div className="col-md-6">
-                  <label for="firstName" className="form-label small m-0">
+                  <label for="firstName" className="form-label small m-0 mt-">
                     Prénom
                   </label>
                   <input
@@ -92,8 +93,17 @@ export default function Checkout() {
                 className="form-control my-2 mt-0"
                 placeholder="Adresse complémentaire"
               />
-              <select className="form-select my-2 ">
-                <option>Sélectionner un pays</option>
+              <label
+                for="country"
+                className="form-label small m-0 mt-0"
+              >
+                Pays
+              </label>
+              <select
+              id="country" 
+              className="form-select my-2 mt-0 pt-2 "
+              >
+                <option>Sélectionnez un pays</option>
               </select>
               <div className="row">
                 <div className="col-md-4">
@@ -132,7 +142,7 @@ export default function Checkout() {
                 Téléphone
               </label>
               <input
-                type="text"
+                type="number"
                 id="phone"
                 className="form-control mt-0"
                 placeholder="Indiquez votre numéro de téléphone"
@@ -150,7 +160,7 @@ export default function Checkout() {
               </div>
             </div>
             <div className="mb-1 p-3 pt-0">
-              <h5 className="fw-bold mb-0">Méthode de Livraison</h5>
+              <h5 className="fw-bold mb-0 fs-4">Méthode de Livraison</h5>
               <small className="text-muted">
                 Sélectionnez votre méthode de livraison ci-dessous
               </small>
@@ -163,7 +173,7 @@ export default function Checkout() {
               </div>
             </div>
             <div className="mb-4 p-3">
-              <h5>Paiement</h5>
+              <h5 className="fw-bold mb-0 fs-4">Paiement</h5>
               <small className="text-muted">
                 Sélectionnez votre méthode de paiement ci-dessous. Toutes les
                 transactions sont sécurisées et cryptées.
@@ -179,14 +189,6 @@ export default function Checkout() {
                 />
               </div>
               <div className="card mt-0 mb-3 rounded-top-0 border-top-0">
-                {/* <div className="form-check">
-                   <input
-                    type="radio"
-                    className="form-check-input"
-                    id="creditCard"
-                    checked
-                  />
-                </div> */}
                 <div className="p-2">
                   <label for="cardNumber" className="form-label small m-0">
                     Numéro de carte
@@ -226,28 +228,29 @@ export default function Checkout() {
             </div>
           </div>
 
-          {/* Partie droite : Votre commande */}
+          {/* right column / your order */}
           <div className="col-lg-6 order-lg-2 order-1 mb-4">
             <div className=" p-3">
-              <h5 className="mb-3">Votre commande</h5>
+              <h5 className="fw-bold mb-3 fs-4">Votre commande</h5>
               <div className="d-flex align-items-start">
-                <img
-                  src="https://via.placeholder.com/60"
-                  alt="Produit"
-                  style={{
-                    width: '60px',
-                    height: '60px',
-                    objectFit: 'cover',
-                    marginRight: '10px',
-                  }}
-                />
+                <div className="position-relative me-2">
+                  <img
+                    src="/tower.png"
+                    className="custom-article-img"
+                    alt="Produit"
+                  />
+                  <span class="position-absolute top-0 start-60 translate-middle badge rounded-pill bg-secondary">
+                    1
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </div>
                 <div>
-                  <p className="mb-0">
+                  <p className="mb-0 fw-semibold fs-5">
                     Montessori Multi-Usage Observation Tower
                   </p>
                   <small className="text-muted">Default Title</small>
                 </div>
-                <span className="ms-auto fw-bold">€39.90</span>
+                <span className="ms-auto fw-bold fs-5">€39.90</span>
               </div>
               <hr />
               <div className="mb-3 d-flex">
@@ -256,13 +259,21 @@ export default function Checkout() {
                   className="form-control me-2"
                   placeholder="Code de réduction"
                 />
-                <button className="btn btn-secondary">Appliquer</button>
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary"
+                  disabled
+                >
+                  Appliquer
+                </button>
               </div>
               <div className="d-flex justify-content-between mb-1">
-                <span className="text-muted">Sous-total - 1 Items</span>
-                <span>€39.90</span>
+                <span className="text-muted fw-semibold">
+                  Sous-total - 1 Items
+                </span>
+                <span className="fw-semibold">€39.90</span>
               </div>
-              <div className="d-flex justify-content-between mb-1">
+              <div className="d-flex justify-content-between mb-2 mt-2">
                 <span className="text-muted">Livraison</span>
                 <span>-</span>
               </div>
@@ -272,30 +283,45 @@ export default function Checkout() {
               </div>
               <hr />
               <div className="d-flex justify-content-between mb-4">
-                <span className="fw-bold">Total</span>
-                <span className="fw-bold">€39.90</span>
+                <span className="fw-bold fs-4">Total</span>
+                <span className="fw-bold fs-4">€39.90</span>
               </div>
 
               {/* Informations supplémentaires */}
-              <div className="mb-2">
-                <h6 className="fw-bold">Service Client</h6>
-                <p className="text-muted mb-2 small">
-                  Nous répondons à vos questions du lundi au vendredi de 9h à
-                  18h.
-                </p>
+              <div className="d-flex justify-content-flex-start mb-2">
+                <img src="/icons/shield.png" className="custom-icons" />
+                <div>
+                  <h6 className="fw-semibold mb-1 ms-2 ">Service Client</h6>
+                  <p className="text-muted mb-2 small ms-2">
+                    Nous répondons à vos questions du lundi au vendredi de 9h à
+                    18h.
+                  </p>
+                </div>
               </div>
-              <div className="mb-2">
-                <h6 className="fw-bold">Satisfait ou remboursé 30 jours</h6>
-                <p className="text-muted mb-2 small">
-                  Insatisfait ? Remboursement facile et sans condition.
-                </p>
+              <div className="d-flex justify-content-flex-start mb-2">
+                <img
+                  src="/icons/schedule.png"
+                  className="custom-icons-schedule"
+                />
+                <div>
+                  <h6 className="fw-semibold mb-1 ms-2">
+                    Satisfait ou remboursé 30 jours
+                  </h6>
+                  <p className="text-muted mb-2 small ms-2">
+                    Insatisfait ? Remboursement facile et sans condition. Votre
+                    satisfaction est notre priorité.
+                  </p>
+                </div>
               </div>
-              <div className="mb-2">
-                <h6 className="fw-bold">Expédition en 48h</h6>
-                <p className="text-muted mb-0 small">
-                  Bénéficiez d'une expédition ultra-rapide avec suivi en
-                  seulement 48 heures.
-                </p>
+              <div className="d-flex justify-content-flex-start mb-2">
+                <img src="/icons/truck.png" className="custom-icons" />
+                <div>
+                  <h6 className="fw-semibold mb-1 ms-2">Expédition en 48h</h6>
+                  <p className="text-muted mb-2 small ms-2">
+                    Bénéficiez d'une expédition ultra-rapide avec suivi en
+                    seulement 48 heures.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

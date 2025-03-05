@@ -14,11 +14,35 @@
     background-color: #e08207 !important;
     /* Couleur warning */
     border-color: #ffc107 !important;
-    
+
 }
 
-input::placeholder {
-    font-size: 0.8rem; 
-    color: #6c757d;
-    opacity: 1; 
-  }
+
+.form-control::placeholder {
+    font-size: 0.8rem;
+    color: #a2a6aaf1;
+    opacity: 1;
+}
+
+.custom-article-img {
+    width: 3.75rem;
+    height: 3.75rem;
+    object-fit: cover;
+/*     margin-right: 0.8rem; */
+}
+
+.custom-icons {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#country{
+    font-size: 0.9rem;
+}
+
+.custom-icons-schedule {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.1rem;
+}
+
