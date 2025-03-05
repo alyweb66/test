@@ -1,0 +1,48 @@
+.custom-border {
+    border-top: 2px solid #ffc107;
+    border-bottom: 1px solid rgb(223, 221, 221);
+    background-color: white;
+    padding: 0.3rem 0;
+}
+
+.custom-nav-img {
+    width: 3.8rem;
+    height: auto;
+}
+
+.custom-checkbox:checked {
+    background-color: #e08207 !important;
+    /* Couleur warning */
+    border-color: #ffc107 !important;
+
+}
+
+
+.form-control::placeholder {
+    font-size: 0.8rem;
+    color: #a2a6aaf1;
+    opacity: 1;
+}
+
+.custom-article-img {
+    width: 3.75rem;
+    height: 3.75rem;
+    object-fit: cover;
+/*     margin-right: 0.8rem; */
+}
+
+.custom-icons {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#country{
+    font-size: 0.9rem;
+}
+
+.custom-icons-schedule {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.1rem;
+}
+
